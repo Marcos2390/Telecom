@@ -45,7 +45,7 @@ public class Main {
         int idInternet = sc.nextInt();
 
         double total = 0;
-        S
+    
 
         // precios
 		
