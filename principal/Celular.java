@@ -1,6 +1,5 @@
 package principal;
 
-
 public class Celular extends Oferta {
 
 	private String Marca;
@@ -10,33 +9,26 @@ public class Celular extends Oferta {
 	private int RAM;
 	private boolean banda5g;
 
-	
-	public Celular(int id, double price, boolean aplicaPromo, String Marca, String Modelo, char color, int InternMemory, int RAM, boolean banda5g) {
-	super(id,price,aplicaPromo);
-	this.Marca=Marca;
-	this.Modelo=Modelo;
-	this.color=color;
-	this.InternMemory=InternMemory;
-	this.RAM=RAM;
-	this.banda5g=banda5g;
-
-
-
-
+	public Celular(int id, double price, boolean aplicaPromo, String Marca, String Modelo, char color, int InternMemory,
+			int RAM, boolean banda5g) {
+		super(id, price, aplicaPromo);
+		this.Marca = Marca;
+		this.Modelo = Modelo;
+		this.color = color;
+		this.InternMemory = InternMemory;
+		this.RAM = RAM;
+		this.banda5g = banda5g;
 
 	}
 
-	
 	public String getMarca() {
-	    return  Marca;
+		return Marca;
 	}
 
-	
 	public void setMarca(String Marca) {
-		this.Marca=Marca;
+		this.Marca = Marca;
 	}
 
-	
 	public String getModelo() {
 		return Modelo;
 	}
@@ -45,50 +37,60 @@ public class Celular extends Oferta {
 		this.Modelo = Modelo;
 	}
 
-	
 	public char getColor() {
 		return color;
 	}
 
-	
 	public void setColor(char color) {
-		this.color=color;
+		this.color = color;
 	}
 
-	
 	public int getInternMemory() {
 		return InternMemory;
 	}
 
-	
 	public void setInternMemory(int InternMemory) {
-		this.InternMemory=InternMemory;
+		this.InternMemory = InternMemory;
 	}
 
-	
 	public int getRAM() {
 		return RAM;
 	}
 
-	
 	public void setRAM(int RAM) {
-		this.RAM=RAM;
+		this.RAM = RAM;
 	}
 
-	
 	public boolean getBanda5g() {
 		return banda5g;
 	}
 
-	
 	public void setBanda5g(boolean banda5g) {
-		this.banda5g= banda5g;
+		this.banda5g = banda5g;
 	}
 
-	
-	@Override   //Nota: Este método sobreescribe (override) el método mostrarInfo de la superclase Oferta
+	@Override
 	public String mostrarInfo() {
-		return super.mostrarInfo() + "La marca es " + getMarca () + " modelo " + getModelo() + " color  "+ getColor() + " con una memoria de" + getInternMemory() +  " tiene una memoria de " + getRAM() + " y un plan de banda " + getBanda5g();  //Completar (Incluir atributos de Celular y llamar al método mostrarInfo de la superclase)	
+		return super.mostrarInfo() +
+				"Marca: " + getMarca() + "\n" +
+				"Modelo: " + getModelo() + "\n" +
+				"Color: " + getColor() + "\n" +
+				"Memoria Interna: " + getInternMemory() + " GB\n" +
+				"RAM: " + getRAM() + " GB\n" +
+				"Banda 5G: " + (getBanda5g() ? "Sí" : "No") + "\n";
 	}
-
 }
+
+/*
+ * @Override //Nota: Este método sobreescribe (override) el método mostrarInfo
+ * de la superclase Oferta
+ * public String mostrarInfo() {
+ * return super.mostrarInfo() + "La marca es " + getMarca () + " modelo " +
+ * getModelo() + " color  "+ getColor() + " con una memoria de" +
+ * getInternMemory() + " tiene una memoria de " + getRAM() +
+ * " y un plan de banda " + getBanda5g(); //Completar (Incluir atributos de
+ * Celular y llamar al método mostrarInfo de la superclase)
+ * }
+ * 
+ * }/*
+ */
