@@ -64,6 +64,7 @@ public class PlanMovil extends Oferta {
 	public String mostrarInfo() {
 		return super.mostrarInfo() + "va con el plan" + getPlan() +
 		"tiene un volumen de" + getVolumenGB() + "con" + getVolumenMin() + " y " + getVolumenSMS();
+
 }
 
 }
